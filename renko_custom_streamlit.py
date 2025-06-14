@@ -154,7 +154,7 @@ if st.button('Analyze Stocks'):
         stock_list = stock_list['Symbol'].tolist()[0:200]
 
     for ticker in stock_list:
-        print ("Downloading data for:", ticker)
+        #print ("Downloading data for:", ticker)
 
         try:
             # Fetch data
@@ -166,7 +166,7 @@ if st.button('Analyze Stocks'):
 
             # Buy Condition
             if last_peak_close < renko_df['Close'].iloc[-1]:
-                print (f"Buy Condition for {ticker}")
+                #print (f"Buy Condition for {ticker}")
 
                 # Plot the Renko chart
                 plot_Renko(ticker, renko_df, last_peak_close)
